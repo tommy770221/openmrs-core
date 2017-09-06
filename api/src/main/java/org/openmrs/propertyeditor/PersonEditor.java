@@ -62,7 +62,7 @@ public class PersonEditor extends PropertyEditorSupport {
 	@Override
 	public String getAsText() {
 		Person t = (Person) getValue();
-		if (t == null) {
+		if (t == null || t.getPersonId()==null) {
 			return "";
 		} else {
 			return t.getPersonId().toString();
